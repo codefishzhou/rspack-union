@@ -29,11 +29,12 @@ export default defineConfig({
       config.resolve.alias['@'] = path.resolve(__dirname, "src");
       appendPlugins([
         new ModuleFederationPlugin({
-          name: `echarts`,
+          name: `ASSET_REMOTE`,
           filename: `remoteEntry.js`,
           exposes: {
             "./AppIndex": "./src/views/AppIndex",
             "./bigData": "./src/views/dashed/bigData.vue",
+            // "./views": "./src/views",
             "./store": "./src/store/index",
           },
           shared: {

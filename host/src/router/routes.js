@@ -1,4 +1,5 @@
 import {remoteViews} from "@remote/views"
+import remoteBigData from "@remote/bigData"
 
 const routes = [
   {
@@ -12,7 +13,7 @@ const routes = [
     meta: {
       title: "大数据平台",
     },
-    component: remoteViews.bigData,
+    component: remoteBigData,
   },
 ];
 

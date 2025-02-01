@@ -18,11 +18,9 @@ jobs:
 
       - name: Install and Build
         run: |
-          
+          cd ecahrts
           npm install
-          npm run clean
           npm run build
-          cp -r img/* public/img/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
