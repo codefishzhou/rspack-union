@@ -18,7 +18,8 @@ jobs:
 
       - name: Install and Build
         run: |
-          
+          cd host
+          npm i -g pnpm
           npm install
           npm run build
 
