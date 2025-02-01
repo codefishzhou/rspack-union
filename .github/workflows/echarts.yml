@@ -18,7 +18,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd ecahrts
+          cd echarts
           npm i -g pnpm
           npm install
           npm run build
