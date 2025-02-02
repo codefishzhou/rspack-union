@@ -8,6 +8,7 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "echarts": "^5.6.0",
     "typescript": "^5.4.5",
     "vue": "3.4.31",
     "vue-router": "^4.0.13",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@module-federation/enhanced": "0.7.3",
     "@rsbuild/core": "1.1.2",
+    "@rsbuild/plugin-sass": "^1.2.0",
     "@rsbuild/plugin-vue": "1.0.5",
     "tailwindcss": "3.4.4"
   }

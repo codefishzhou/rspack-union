@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>bigData</h1>
+    <div>
+      <echarts-layout />
   </div>
 </template>
 
 <script setup>
-
+import echartsLayout from "./components/layout.vue"
 </script>

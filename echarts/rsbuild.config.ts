@@ -3,8 +3,12 @@ import { pluginVue } from '@rsbuild/plugin-vue';
 import path from 'node:path';
 import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { dependencies } from "./package.json";
-
+import { pluginSass } from "@rsbuild/plugin-sass";
 export default defineConfig({
+  plugins: [
+    pluginVue(),
+    pluginSass(),
+  ],
   source: {
     entry: {
       index: "./src/main.js",
@@ -20,6 +24,14 @@ export default defineConfig({
   output: {
     assetPrefix: '/',
     filenameHash: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ["sass-loader"],
+      },
+    ],
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
@@ -55,10 +67,4 @@ export default defineConfig({
       ]);
     },
   },
-  plugins: [pluginVue({
-    splitChunks: {
-      vue: false,
-      router: false
-    }
-  })],
-});
+} as any);

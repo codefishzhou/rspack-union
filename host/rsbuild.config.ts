@@ -4,7 +4,7 @@ import { pluginVue } from "@rsbuild/plugin-vue";
 import path from "node:path";
 import { dependencies } from "./package.json";
 import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
-
+import { pluginSass } from "@rsbuild/plugin-sass";
 export default defineConfig({
   source: {
     entry: {
@@ -47,10 +47,13 @@ export default defineConfig({
       ]);
     },
   },
-  plugins: [pluginVue({
-    splitChunks: {
-      vue: false,
-      router: false
-    }
-  })],
+  plugins: [
+    pluginVue({
+      splitChunks: {
+        vue: false,
+        router: false
+      }
+    }),
+    pluginSass(),
+  ],
 });
