@@ -11,6 +11,15 @@ export default defineConfig({
       index: "./src/main.js",
     },
   },
+  plugins: [
+    pluginVue({
+      splitChunks: {
+        vue: false,
+        router: false
+      }
+    }),
+    pluginSass(),
+  ],
   server: {
     port: 3000,
   },
@@ -22,6 +31,9 @@ export default defineConfig({
     rspack: (config, { appendPlugins }) => {
       // Will work in dev only if set to "/"
       config.resolve ||= {};
+      // config.module ||= {
+      //   rules: []
+      // }
       config.resolve.alias ||= {};
       config.output ||= {};
       // public
@@ -46,14 +58,19 @@ export default defineConfig({
         }),
       ]);
     },
+    // sass: {
+    //   // 添加 Sass 模块解析配置
+    //   implementation: 'sass-embedded',
+    //   sassOptions: {
+    //     importer: [
+    //       (url) => {
+    //         if (url.startsWith('@/')) {
+    //           return { file: path.resolve(__dirname, 'src', url.slice(2)) };
+    //         }
+    //         return null;
+    //       }
+    //     ]
+    //   }
+    // },
   },
-  plugins: [
-    pluginVue({
-      splitChunks: {
-        vue: false,
-        router: false
-      }
-    }),
-    pluginSass(),
-  ],
 });
