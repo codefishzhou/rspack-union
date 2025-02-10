@@ -4,19 +4,26 @@ export default {
 };
 </script>
 <template>
-  <div :class="$style.view">
-    <div :class="$style.main">
+  <div class="bg-[#1d3463]">
+    <div>
       <router-view />
     </div>
   </div>
 </template>
 
-<style module scoped>
+<style lang="scss"scoped>
+@import "@/assets/styles/normal.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
+
+<!-- <style module scoped>
 .view {
   @apply min-h-screen overflow-hidden bg-gray-100 print:!overflow-visible print:invisible print:h-full;
 }
 
 .main {
   @apply m-auto;
-}
-</style>
+} 
+</style>-->

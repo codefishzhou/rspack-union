@@ -1,6 +1,6 @@
 <template>
-  <canvas id="canvas"> </canvas>
-  <div class="contetnbox">
+  <!-- <canvas id="canvas"> </canvas> -->
+  <div class="contetnbox bg-[#1d3463] overflow-hidden">
     <div class="head">
       <div class="publicdata">
         <div class="publicshow">
@@ -157,41 +157,41 @@
 </template>
 
 <script>
-// import "../../../public/tools/jquery.min.js";
-// import "../../tools/jcarousellite";
-// import "../../tools/dataScoll";
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import * as echarts from 'echarts';
+
 export default {
   name: "one",
   setup() {
-    let timer = new ref(true);
-    return {
-      timer,
-    };
-  },
-  mounted() {
-    this.loadfirstdata();
-    this.loadseconddata();
-    this.loadAddInfo();
-    this.loadAddInfoPie();
-    this.loadMainCancar();
-    this.loadBottomLeftMid();
-    this.loadBottomRightMid();
-    this.loadBottomRight();
-    this.loadNumberAnimate(); //添加数字滚动类名
-    this.numScroll(); //数字滚动触发
-    this.loadContentscroll(); //内容滚动
-    this.loadcanvas();
-  },
-  beforeUnmount() {
-    this.timer = false;
-  },
-  methods: {
+    const timer = ref(true);
+    const titlePie1 = ref(null);
+    const titlePie2 = ref(null);
+    const addinfo = ref(null);
+    const addinfoPie = ref(null);
+    const mainCancar = ref(null);
+    const barone = ref(null);
+    const bartwo = ref(null);
+    const barthree = ref(null);
+    
+    const qtyShowElements = ref([]);
+    const boxaElements = ref([]);
+
+    // 初始化图表方法
+    const initCharts = () => {
+      loadfirstdata();
+      loadseconddata();
+      loadAddInfo();
+      loadAddInfoPie();
+      loadMainCancar();
+      loadBottomLeftMid();
+      loadBottomRightMid();
+      loadBottomRight();
+    }
+
     // 接送服务公开数量占比
-    loadfirstdata() {
-      let mynode = this.$refs.titlePie1;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+    const loadfirstdata = () => {
+      const myChart = echarts.init(titlePie1.value);
+      const options = {
         legend: {
           show: true,
           right: "13%",
@@ -287,16 +287,16 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
     //接送服务公开数量占比
-    loadseconddata() {
-      let mynode = this.$refs.titlePie2;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+    const loadseconddata = () => {
+      const myChart = echarts.init(titlePie2.value);
+      const options = {
         legend: {
           show: true,
           right: "3%",
@@ -461,16 +461,16 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
     //添加信息数据展示
-    loadAddInfo() {
-      let mynode = this.$refs.addinfo;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+    const loadAddInfo = () => {
+      const myChart = echarts.init(addinfo.value);
+      const options = {
         title: {
           //   text: "World Population",
         },
@@ -532,15 +532,15 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
-    loadAddInfoPie() {
-      let mynode = this.$refs.addinfoPie;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
+    const loadAddInfoPie = () => {
+      const myChart = echarts.init(addinfoPie.value);
+      const options = {
         legend: {
           show: true,
           width: "50%",
@@ -689,16 +689,16 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
     //加载左下
-    loadMainCancar() {
-      let mynode = this.$refs.mainCancar;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+    const loadMainCancar = () => {
+      const myChart = echarts.init(mainCancar.value);
+      const options = {
         title: {
           //   text: "Basic Radar Chart",
         },
@@ -738,15 +738,15 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
-    loadBottomLeftMid() {
-      let mynode = this.$refs.barone;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
+    const loadBottomLeftMid = () => {
+      const myChart = echarts.init(barone.value);
+      const options = {
         xAxis: {
           type: "category",
           data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -800,15 +800,15 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
-    loadBottomRightMid() {
-      let mynode = this.$refs.bartwo;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
+    const loadBottomRightMid = () => {
+      const myChart = echarts.init(bartwo.value);
+      const options = {
         xAxis: {
           type: "category",
           data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -853,15 +853,15 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
-    loadBottomRight() {
-      let mynode = this.$refs.barthree;
-      let myChar = this.$echarts.init(mynode);
-      let options = {
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
+      });
+    }
+
+    const loadBottomRight = () => {
+      const myChart = echarts.init(barthree.value);
+      const options = {
         xAxis: {
           type: "value",
           splitLine: {
@@ -918,49 +918,75 @@ export default {
           },
         ],
       };
-      myChar.setOption(options);
-      window.resize = function () {
-        myChar.resize();
-      };
-    },
-    numScroll() {
-      if (this.timer) {
-        setInterval(() => {
-          $(".counter-value").each(function () {
-            $(this)
-              .prop("Counter", 0)
-              .animate(
-                {
-                  Counter: $(this).text(),
-                },
-                {
-                  duration: 2500,
-                  easing: "swing",
-                  step: function (now) {
-                    $(this).text(now.toFixed(0));
-                  },
-                }
-              );
-          });
-        }, 5000);
-      }
-    },
-    loadNumberAnimate() {
-      $(".qtyshow").addClass("counter-value").text("304");
-      $(".boxa").addClass("counter-value").text(`11`);
-    },
-    loadContentscroll() {
-      $(".contentscroll").jCarouselLite({
-        vertical: true,
-        hoverPause: true,
-        visible: 4,
-        scroll: 1,
-        circular: true,
-        auto: 1000,
-        speed: 500,
+      myChart.setOption(options);
+      window.addEventListener('resize', () => {
+        myChart.resize();
       });
-    },
-    loadcanvas() {
+    }
+
+    const loadNumberAnimate = () => {
+      // 获取所有 qtyshow 元素
+      qtyShowElements.value = document.querySelectorAll('.qtyshow');
+      qtyShowElements.value.forEach(el => {
+        el.textContent = '304';
+      });
+
+      // 获取所有 boxa 元素
+      boxaElements.value = document.querySelectorAll('.boxa');
+      boxaElements.value.forEach(el => {
+        el.textContent = '11';
+      });
+    }
+
+    const animateNumber = (element, start, end, duration) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const current = Math.floor(progress * (end - start) + start);
+        element.textContent = current;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    const numScroll = () => {
+      if (timer.value) {
+        const animateElements = () => {
+          [...qtyShowElements.value, ...boxaElements.value].forEach(el => {
+            const targetNumber = parseInt(el.textContent);
+            animateNumber(el, 0, targetNumber, 2500);
+          });
+        };
+
+        // 初始执行一次
+        animateElements();
+        
+        // 每5秒执行一次
+        const intervalId = setInterval(animateElements, 5000);
+
+        // 保存 intervalId 以便在组件卸载时清除
+        return intervalId;
+      }
+    }
+
+    const loadContentscroll = () => {
+      document.querySelectorAll('.contentscroll').forEach(el => {
+        // el.jCarouselLite({
+        //   vertical: true,
+        //   hoverPause: true,
+        //   visible: 4,
+        //   scroll: 1,
+        //   circular: true,
+        //   auto: 1000,
+        //   speed: 500,
+        // });
+      });
+    }
+
+    const loadcanvas = () => {
       class Circle {
         //创建对象
         //以一个圆为对象
@@ -1082,12 +1108,52 @@ export default {
         current_circle.x = null;
         current_circle.y = null;
       };
-    },
-  },
+    }
+
+    onMounted(() => {
+      initCharts();
+      loadNumberAnimate();
+      const intervalId = numScroll();
+      
+      // 保存清理函数
+      if (intervalId) {
+        onBeforeUnmount(() => {
+          clearInterval(intervalId);
+        });
+      }
+      
+      loadContentscroll();
+      loadcanvas();
+    });
+
+    return {
+      timer,
+      titlePie1,
+      titlePie2,
+      addinfo,
+      addinfoPie,
+      mainCancar,
+      barone,
+      bartwo,
+      barthree,
+      qtyShowElements,
+      boxaElements,
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+::-webkit-scrollbar{
+  width: 0;
+}
+::-webkit-scrollbar-track{
+  width: 0;
+}
+::-webkit-scrollbar-thumb{
+  width: 0;
+}
+
 .contetnbox {
   width: 100%;
   height: 100vh;

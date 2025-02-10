@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@rsbuild/plugin-sass": "^1.0.1",
-    "resolve-url-loader": "^5.0.0",
     "vue": "3.4.31",
     "vue-router": "^4.0.13",
     "vuex": "^4.1.0"
