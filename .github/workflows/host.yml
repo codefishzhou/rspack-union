@@ -32,6 +32,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          publish_dir: ./host
+          publish_dir: ./host/dist
           destination_dir: ./host
           keep_files: true  # 保留已有文件
