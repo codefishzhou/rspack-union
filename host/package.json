@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
+    "build": "rsbuild build --mode production",
     "preview": "rsbuild preview"
   },
   "dependencies": {
