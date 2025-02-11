@@ -3,7 +3,7 @@ import routes from "./routes";
 
 const router = createRouter({
   hashbang: false,
-  mode: "history",
+  mode: "hash",
   history: createWebHistory("/"),
   base: "/dashboard/",
   routes,
