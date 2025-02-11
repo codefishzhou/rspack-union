@@ -80,7 +80,7 @@
       "usedIn": [
         "src/bootstrap.js + 9 modules"
       ],
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
     {
       "alias": "@remote",
@@ -90,7 +90,7 @@
       "usedIn": [
         "src/bootstrap.js + 9 modules"
       ],
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
     {
       "alias": "@remote",
@@ -100,7 +100,7 @@
       "usedIn": [
         "src/views/Index.vue + 4 modules"
       ],
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     }
   ],
   "exposes": []

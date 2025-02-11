@@ -71,19 +71,19 @@
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "store",
       "alias": "@remote",
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
     {
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "bigData",
       "alias": "@remote",
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
     {
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "AppIndex",
       "alias": "@remote",
-      "entry": "http://localhost:3001/remoteEntry.js"
+      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     }
   ],
   "exposes": []
