@@ -13,17 +13,16 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+    open: false,
   },
   dev: {
     // It is necessary to configure assetPrefix, and in the production build, you need to configure output.assetPrefix
     assetPrefix: `http://localhost:3001`,
   },
   output: {
-    assetPrefix: "/",
+    assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,
-    publicPath: process.env.NODE_ENV === 'production' 
-      ? 'https://codefishzhou.github.io/rspack-union/echarts/'
-      : '/'
+    publicPath: process.env.VUE_APP_PUBLICPATH
   },
   module: {
     rules: [

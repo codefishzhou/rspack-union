@@ -23,14 +23,16 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
+    open: false,
   },
   output: {
-    assetPrefix: '/',
+    assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,
-    publicPath: process.env.NODE_ENV === 'production' ? 'https://codefishzhou.github.io/rspack-union/host/' : '/'
+    publicPath: process.env.VUE_APP_PUBLICPATH
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
+      console.log(process.env.NODE_ENV, '--env')
       // Will work in dev only if set to "/"
       config.resolve ||= {};
       // config.module ||= {
