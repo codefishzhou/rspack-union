@@ -53,6 +53,8 @@
       "assets": {
         "js": {
           "async": [
+            "static/js/async/432.bb6f40d5.js",
+            "static/js/async/34.a61384ff.js",
             "static/js/async/46.c08e89cc.js",
             "static/js/async/529.185f92f9.js"
           ],
