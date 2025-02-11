@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - 'host/**' 
+      - 'echarts/**' 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -19,6 +22,7 @@ jobs:
       - name: Install and Build
         run: |
           cd host
+          rm -rf node_modules pnpm-lock.yaml
           npm i -g pnpm
           npm install
           npm run build
