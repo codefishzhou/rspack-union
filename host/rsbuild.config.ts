@@ -27,6 +27,9 @@ export default defineConfig({
   output: {
     assetPrefix: '/',
     filenameHash: true,
+    publicPath: process.env.NODE_ENV === 'production' 
+      ? 'https://codefishzhou.github.io/rspack-union/'
+      : '/'
   },
   tools: {
     rspack: (config, { appendPlugins }) => {

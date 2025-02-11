@@ -22,7 +22,7 @@ export default defineConfig({
     assetPrefix: "/",
     filenameHash: true,
     publicPath: process.env.NODE_ENV === 'production' 
-      ? 'https://cdn.your-domain.com/echarts/'  
+      ? 'https://codefishzhou.github.io/rspack-union/echarts/'
       : '/'
   },
   module: {
