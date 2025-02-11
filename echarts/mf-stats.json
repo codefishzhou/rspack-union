@@ -1,0 +1,186 @@
+{
+  "id": "ASSET_REMOTE",
+  "name": "ASSET_REMOTE",
+  "metaData": {
+    "name": "ASSET_REMOTE",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "rsbuild-vue_provider"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "ASSET_REMOTE",
+    "pluginVersion": "0.7.3",
+    "publicPath": "/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^5.6.0",
+      "shareScope": "default",
+      "name": "echarts",
+      "version": "5.6.0",
+      "eager": false,
+      "id": "ASSET_REMOTE:echarts",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/529.185f92f9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./bigData"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "3.4.31",
+      "shareScope": "default",
+      "name": "vue",
+      "version": "3.4.31",
+      "eager": false,
+      "id": "ASSET_REMOTE:vue",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/46.c08e89cc.js",
+            "static/js/async/529.185f92f9.js"
+          ],
+          "sync": [
+            "static/js/async/lib-vue.28b4e14e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./AppIndex",
+        "./bigData"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "shareScope": "default",
+      "name": "vuex",
+      "version": "4.1.0",
+      "eager": false,
+      "id": "ASSET_REMOTE:vuex",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/lib-vue.28b4e14e.js"
+          ],
+          "sync": [
+            "static/js/async/46.c08e89cc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./store"
+      ]
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./AppIndex",
+      "id": "ASSET_REMOTE:AppIndex",
+      "name": "AppIndex",
+      "requires": [
+        "vue"
+      ],
+      "file": "src/views/AppIndex",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/lib-vue.28b4e14e.js",
+            "static/js/async/__federation_expose_AppIndex.7d3be440.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./bigData",
+      "id": "ASSET_REMOTE:bigData",
+      "name": "bigData",
+      "requires": [
+        "vue",
+        "echarts"
+      ],
+      "file": "src/views/dashed/bigData.vue",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/lib-vue.28b4e14e.js",
+            "static/js/async/__federation_expose_bigData.36727061.js"
+          ],
+          "async": [
+            "static/js/async/529.185f92f9.js"
+          ]
+        },
+        "css": {
+          "sync": [
+            "static/css/async/__federation_expose_bigData.d8f43416.css"
+          ],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./store",
+      "id": "ASSET_REMOTE:store",
+      "name": "store",
+      "requires": [
+        "vuex"
+      ],
+      "file": "src/store/index",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_store.92660cdf.js"
+          ],
+          "async": [
+            "static/js/async/46.c08e89cc.js",
+            "static/js/async/lib-vue.28b4e14e.js",
+            "static/js/async/__federation_expose_AppIndex.7d3be440.js",
+            "static/js/async/__federation_expose_bigData.36727061.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "static/css/async/__federation_expose_bigData.d8f43416.css"
+          ]
+        }
+      }
+    }
+  ]
+}
