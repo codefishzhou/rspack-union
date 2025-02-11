@@ -27,11 +27,11 @@ jobs:
           npm i -g pnpm
           npm install
           npm run build
-          cp -a dist ../
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
           publish_dir: ./dist
+          destination_dir: ./host
           keep_files: true  # 保留已有文件
