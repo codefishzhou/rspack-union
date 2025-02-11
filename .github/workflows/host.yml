@@ -34,3 +34,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
           publish_dir: ./dist
+          keep_files: true  # 保留已有文件
