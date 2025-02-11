@@ -28,7 +28,17 @@ export default defineConfig({
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,
-    publicPath: process.env.VUE_APP_PUBLICPATH
+    publicPath: process.env.VUE_APP_PUBLICPATH,
+    polyfill: 'usage',
+  },
+  html:{
+    title: '主应用',
+    crossorigin: 'anonymous',
+    favicon: './public/favicon.svg',
+    meta: {
+      charset: { charset: 'utf-8' },
+      viewport: 'width=device-width, initial-scale=1.0',
+    }
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
