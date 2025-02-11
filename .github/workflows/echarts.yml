@@ -22,12 +22,14 @@ jobs:
           npm i -g pnpm
           npm install
           npm run build
+          mkdir -p ../echrts  # 创建目标目录
+          cp -a public/. ../echrts/  # 将构建结果复制到echrts目录
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          publish_dir: ./public
+          publish_dir: ./echrts
 
       # - name: Install and Build
       #   run: |

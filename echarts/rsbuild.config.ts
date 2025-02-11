@@ -21,6 +21,9 @@ export default defineConfig({
   output: {
     assetPrefix: "/",
     filenameHash: true,
+    publicPath: process.env.NODE_ENV === 'production' 
+      ? 'https://cdn.your-domain.com/echarts/'  
+      : '/'
   },
   module: {
     rules: [
@@ -48,7 +51,7 @@ export default defineConfig({
                 api: "modern-compiler",
                 implementation: require.resolve("sass-embedded"),
                 sourceMap: true,
-                // additionalData: '@import "@/assets/styles/normal.css";'
+                additionalData: '@import "@/assets/styles/normal.css";'
               },
             },
           ],
