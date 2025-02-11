@@ -1,0 +1,107 @@
+{
+  "id": "ASSET_HOST",
+  "name": "ASSET_HOST",
+  "metaData": {
+    "name": "ASSET_HOST",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "rsbuild-vue_consumer"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "ASSET_HOST",
+    "pluginVersion": "0.7.3",
+    "publicPath": "/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "3.4.31",
+      "shareScope": "default",
+      "name": "vue",
+      "version": "3.4.31",
+      "eager": false,
+      "id": "ASSET_HOST:vue",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/449.836a7406.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "shareScope": "default",
+      "name": "vuex",
+      "version": "4.1.0",
+      "eager": false,
+      "id": "ASSET_HOST:vuex",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/449.836a7406.js"
+          ],
+          "sync": [
+            "static/js/async/46.7c50083e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "@remote",
+      "consumingFederationContainerName": "ASSET_HOST",
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "store",
+      "usedIn": [
+        "src/bootstrap.js + 9 modules"
+      ],
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "alias": "@remote",
+      "consumingFederationContainerName": "ASSET_HOST",
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "bigData",
+      "usedIn": [
+        "src/bootstrap.js + 9 modules"
+      ],
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "alias": "@remote",
+      "consumingFederationContainerName": "ASSET_HOST",
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "AppIndex",
+      "usedIn": [
+        "src/views/Index.vue + 4 modules"
+      ],
+      "entry": "http://localhost:3001/remoteEntry.js"
+    }
+  ],
+  "exposes": []
+}

@@ -1,0 +1,90 @@
+{
+  "id": "ASSET_HOST",
+  "name": "ASSET_HOST",
+  "metaData": {
+    "name": "ASSET_HOST",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "rsbuild-vue_consumer"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "ASSET_HOST",
+    "pluginVersion": "0.7.3",
+    "publicPath": "/",
+    "prefetchInterface": false
+  },
+  "shared": [
+    {
+      "id": "ASSET_HOST:vue",
+      "name": "vue",
+      "version": "3.4.31",
+      "singleton": true,
+      "requiredVersion": "3.4.31",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/449.836a7406.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ASSET_HOST:vuex",
+      "name": "vuex",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/449.836a7406.js"
+          ],
+          "sync": [
+            "static/js/async/46.7c50083e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "store",
+      "alias": "@remote",
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "bigData",
+      "alias": "@remote",
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "federationContainerName": "ASSET_REMOTE",
+      "moduleName": "AppIndex",
+      "alias": "@remote",
+      "entry": "http://localhost:3001/remoteEntry.js"
+    }
+  ],
+  "exposes": []
+}
