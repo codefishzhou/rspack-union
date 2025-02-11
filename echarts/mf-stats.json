@@ -36,7 +36,7 @@
         "js": {
           "async": [],
           "sync": [
-            "static/js/async/529.185f92f9.js"
+            "static/js/async/489.40b72c96.js"
           ]
         },
         "css": {
@@ -59,13 +59,14 @@
       "assets": {
         "js": {
           "async": [
-            "static/js/async/432.bb6f40d5.js",
-            "static/js/async/34.a61384ff.js",
-            "static/js/async/46.c08e89cc.js",
-            "static/js/async/529.185f92f9.js"
+            "static/js/async/432.88b37436.js",
+            "static/js/async/34.25d264ef.js",
+            "static/js/async/46.02474646.js",
+            "static/js/lib-polyfill.bfde245f.js",
+            "static/js/async/489.40b72c96.js"
           ],
           "sync": [
-            "static/js/async/lib-vue.28b4e14e.js"
+            "static/js/async/lib-vue.3b993094.js"
           ]
         },
         "css": {
@@ -89,10 +90,10 @@
       "assets": {
         "js": {
           "async": [
-            "static/js/async/lib-vue.28b4e14e.js"
+            "static/js/async/lib-vue.3b993094.js"
           ],
           "sync": [
-            "static/js/async/46.c08e89cc.js"
+            "static/js/async/46.02474646.js"
           ]
         },
         "css": {
@@ -118,8 +119,8 @@
       "assets": {
         "js": {
           "sync": [
-            "static/js/async/lib-vue.28b4e14e.js",
-            "static/js/async/__federation_expose_AppIndex.7d3be440.js"
+            "static/js/async/lib-vue.3b993094.js",
+            "static/js/async/__federation_expose_AppIndex.d403a5c7.js"
           ],
           "async": []
         },
@@ -141,11 +142,12 @@
       "assets": {
         "js": {
           "sync": [
-            "static/js/async/lib-vue.28b4e14e.js",
-            "static/js/async/__federation_expose_bigData.36727061.js"
+            "static/js/lib-polyfill.bfde245f.js",
+            "static/js/async/lib-vue.3b993094.js",
+            "static/js/async/__federation_expose_bigData.4d99cd74.js"
           ],
           "async": [
-            "static/js/async/529.185f92f9.js"
+            "static/js/async/489.40b72c96.js"
           ]
         },
         "css": {
@@ -167,13 +169,15 @@
       "assets": {
         "js": {
           "sync": [
-            "static/js/async/__federation_expose_store.92660cdf.js"
+            "static/js/lib-polyfill.bfde245f.js",
+            "static/js/async/__federation_expose_store.d9676532.js"
           ],
           "async": [
-            "static/js/async/46.c08e89cc.js",
-            "static/js/async/lib-vue.28b4e14e.js",
-            "static/js/async/__federation_expose_AppIndex.7d3be440.js",
-            "static/js/async/__federation_expose_bigData.36727061.js"
+            "static/js/async/46.02474646.js",
+            "static/js/async/lib-vue.3b993094.js",
+            "static/js/async/__federation_expose_AppIndex.d403a5c7.js",
+            "static/js/lib-polyfill.bfde245f.js",
+            "static/js/async/__federation_expose_bigData.4d99cd74.js"
           ]
         },
         "css": {
