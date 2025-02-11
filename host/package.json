@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "rsbuild dev --open",
+    "dev": "rsbuild dev --open --env-mode dev",
     "build": "rsbuild build  --env-mode production",
     "preview": "rsbuild preview"
   },

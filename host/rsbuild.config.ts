@@ -47,8 +47,8 @@ export default defineConfig({
           name: `ASSET_HOST`,
           filename: `ASSET_HOST__remoteEntry.js`,
           remotes: {
-            "@remote": "ASSET_REMOTE@http://localhost:3001/remoteEntry.js",
-            "@remote1": `ASSET_REMOTE@${getRemoteEntryUrl()}`
+            // "@remote": "ASSET_REMOTE@http://localhost:3001/remoteEntry.js",
+            "@remote": `ASSET_REMOTE@${process.env.VUE_APP_REMOTEECHARTS}/remoteEntry.js`
           },
           shared: {
             vue: {
@@ -80,11 +80,3 @@ export default defineConfig({
   },
 });
 
-// 环境判断函数（支持多环境）
-function getRemoteEntryUrl() {
-  if (process.env.NODE_ENV === 'development') {
-    return 'http://localhost:3001/echarts/remoteEntry.js'; 
-  }
-  // 生产环境使用CDN地址或子应用独立域名
-  return 'https://cdn.your-domain.com/echarts/remoteEntry.js';
-}
