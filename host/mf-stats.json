@@ -21,7 +21,7 @@
     },
     "globalName": "ASSET_HOST",
     "pluginVersion": "0.7.3",
-    "publicPath": "/"
+    "publicPath": "/rspack-union/host/"
   },
   "shared": [
     {
