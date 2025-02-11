@@ -1,5 +1,5 @@
-import {remoteViews} from "@remote/views"
-import remoteBigData from "@remote/bigData"
+// import {remoteViews} from "@remote/views"
+// import remoteBigData from "@remote/bigData"
 
 const routes = [
   {

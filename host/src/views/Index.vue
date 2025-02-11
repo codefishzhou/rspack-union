@@ -29,8 +29,5 @@ export default {
 </script>
 
 <template>
-  <p class="bg-[#1d3463]"> Hi There, this is consumer app. I'm loading userData from remote : {{ userData }}</p>
-  <AppIndex>
-    <router-view />
-  </AppIndex>
+    <div>index</div>
 </template>

@@ -25,6 +25,9 @@ export default defineConfig({
     port: 3000,
     open: false,
   },
+  server: {
+    open: false,
+  },
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,

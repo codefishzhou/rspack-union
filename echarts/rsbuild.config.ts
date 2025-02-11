@@ -4,8 +4,9 @@ import path from "node:path";
 import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { dependencies } from "./package.json";
 import { pluginSass } from "@rsbuild/plugin-sass";
+import { pluginEslint } from '@rsbuild/plugin-eslint';
 export default defineConfig({
-  plugins: [pluginVue(), pluginSass()],
+  plugins: [pluginVue(), pluginSass(), pluginEslint()],
   source: {
     entry: {
       index: "./src/main.js",
@@ -13,6 +14,9 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+    open: false,
+  },
+  server: {
     open: false,
   },
   dev: {
