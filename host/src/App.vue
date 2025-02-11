@@ -4,7 +4,7 @@ export default {
 };
 </script>
 <template>
-  <div class="bg-[#1d3463]">
+  <div class="">
     <div>
       <router-view />
     </div>

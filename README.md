@@ -24,3 +24,10 @@ pnpm run dev
 ## Additional Notes
 
 - Ensure that both the provider and consumer folders have their dependencies installed before running the application.
+
+
+host 
+https://codefishzhou.github.io/rspack-union/host/#/
+
+echarts
+https://codefishzhou.github.io/rspack-union/echarts/#/home
