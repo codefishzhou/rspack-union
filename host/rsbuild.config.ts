@@ -59,6 +59,10 @@ export default defineConfig({
               singleton: true,
               requiredVersion: dependencies.vuex,
             },
+            vueRouter: {
+              singleton: true,
+              requiredVersion: dependencies['vue-router'],
+            },
           },
         }),
       ]);

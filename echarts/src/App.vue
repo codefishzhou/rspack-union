@@ -16,6 +16,7 @@ export default {
 <template>
   <div class="">
     Hi from landing page provider {{ year }}
+    <router-view></router-view>
   </div>
 </template>
 
