@@ -21,7 +21,7 @@
     },
     "globalName": "ASSET_REMOTE",
     "pluginVersion": "0.7.3",
-    "publicPath": "/rspack-union/host/"
+    "publicPath": "/rspack-union/echarts/"
   },
   "shared": [
     {
@@ -148,7 +148,7 @@
         },
         "css": {
           "sync": [
-            "static/css/async/__federation_expose_bigData.596c6b86.css"
+            "static/css/async/__federation_expose_bigData.2a368617.css"
           ],
           "async": []
         }
@@ -177,7 +177,7 @@
         "css": {
           "sync": [],
           "async": [
-            "static/css/async/__federation_expose_bigData.596c6b86.css"
+            "static/css/async/__federation_expose_bigData.2a368617.css"
           ]
         }
       }
