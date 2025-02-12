@@ -16,36 +16,32 @@ export default defineConfig({
     pluginVue({
       splitChunks: {
         vue: false,
-        router: false
-      }
+        router: false,
+      },
     }),
     pluginSass(),
   ],
   server: {
-    port: 3000,
-    open: false,
-  },
-  server: {
+    port: 5050,
     open: false,
   },
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,
     publicPath: process.env.VUE_APP_PUBLICPATH,
-    polyfill: 'usage',
+    polyfill: "usage",
   },
-  html:{
-    title: '主应用',
-    crossorigin: 'anonymous',
-    favicon: './public/favicon.svg',
+  html: {
+    title: "主应用",
+    crossorigin: "anonymous",
+    favicon: "./public/favicon.svg",
     meta: {
-      charset: { charset: 'utf-8' },
-      viewport: 'width=device-width, initial-scale=1.0',
-    }
+      charset: { charset: "utf-8" },
+      viewport: "width=device-width, initial-scale=1.0",
+    },
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
-      console.log(process.env.NODE_ENV, '--env')
       // Will work in dev only if set to "/"
       config.resolve ||= {};
       // config.module ||= {
@@ -60,8 +56,8 @@ export default defineConfig({
           name: `ASSET_HOST`,
           filename: `ASSET_HOST__remoteEntry.js`,
           remotes: {
-            // "@remote": "ASSET_REMOTE@http://localhost:3001/remoteEntry.js",
-            "@remote": `ASSET_REMOTE@${process.env.VUE_APP_REMOTEECHARTS}/remoteEntry.js`
+            // "@remote": "ASSET_REMOTE@http://localhost:6001/remoteEntry.js",
+            "@remote": `ASSET_REMOTE@${process.env.VUE_APP_REMOTEECHARTS}/remoteEntry.js`,
           },
           shared: {
             vue: {
@@ -92,4 +88,3 @@ export default defineConfig({
     // },
   },
 });
-

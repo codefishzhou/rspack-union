@@ -4,7 +4,7 @@ import path from "node:path";
 import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { dependencies } from "./package.json";
 import { pluginSass } from "@rsbuild/plugin-sass";
-import { pluginEslint } from '@rsbuild/plugin-eslint';
+import { pluginEslint } from "@rsbuild/plugin-eslint";
 export default defineConfig({
   plugins: [pluginVue(), pluginSass(), pluginEslint()],
   source: {
@@ -13,30 +13,27 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001,
-    open: false,
-  },
-  server: {
+    port: 5051,
     open: false,
   },
   dev: {
     // It is necessary to configure assetPrefix, and in the production build, you need to configure output.assetPrefix
-    assetPrefix: `http://localhost:3001`,
+    assetPrefix: `http://localhost:5051`,
   },
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
     filenameHash: true,
     publicPath: process.env.VUE_APP_PUBLICPATH,
-    polyfill: 'usage',
+    polyfill: "usage",
   },
-  html:{
-    title: '可视化',
-    crossorigin: 'anonymous',
-    favicon: './public/favicon.svg',
+  html: {
+    title: "可视化",
+    crossorigin: "anonymous",
+    favicon: "./public/favicon.svg",
     meta: {
-      charset: { charset: 'utf-8' },
-      viewport: 'width=device-width, initial-scale=1.0',
-    }
+      charset: { charset: "utf-8" },
+      viewport: "width=device-width, initial-scale=1.0",
+    },
   },
   module: {
     rules: [
@@ -55,16 +52,14 @@ export default defineConfig({
           test: /\.(sass|scss)$/,
           use: [
             {
-              loader: ['css-loader',
-            'postcss-loader',
-            'resolve-url-loader'],
+              loader: ["css-loader", "postcss-loader", "resolve-url-loader"],
               options: {
                 // 同时使用 `modern-compiler` 和 `sass-embedded` 可以显著提升构建性能
                 // 需要 `sass-loader >= 14.2.1`
                 api: "modern-compiler",
                 implementation: require.resolve("sass-embedded"),
                 sourceMap: true,
-                additionalData: '@import "@/assets/styles/normal.css";'
+                additionalData: '@import "@/assets/styles/normal.css";',
               },
             },
           ],
