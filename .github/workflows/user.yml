@@ -4,7 +4,7 @@ on:
     branches:
       - dev
     paths:
-      - 'echarts/**' 
+      - 'user/**' 
       - '.github/**'
 jobs:
   build-and-deploy:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd echarts
+          cd user
           rm -rf node_modules pnpm-lock.yaml
           npm i -g pnpm
           npm install
@@ -31,9 +31,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          publish_dir: ./echarts/dist
+          publish_dir: ./user/dist
           keep_files: true  # 保留已有文件
-          destination_dir: ./echarts
+          destination_dir: ./user
 
       # - name: Install and Build
       #   run: |

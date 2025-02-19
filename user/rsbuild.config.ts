@@ -75,8 +75,7 @@ export default defineConfig({
           name: `USER_REMOTE`,
           filename: `remoteEntry.js`,
           exposes: {
-            "./user": "./src/App.vue",
-            "./routes": "./src/router/"
+            "./UserApp": "./src/main.js"
           },
           shared: {
             vue: {

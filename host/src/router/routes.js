@@ -1,6 +1,5 @@
 import {remoteViews} from "@remote/views"
 import remoteBigData from "@remote/bigData"
-import remoteUser from "@user/user"
 
 const routes = [
   {
@@ -17,15 +16,19 @@ const routes = [
     component: remoteBigData,
   },
   {
-    path: "/user/:pathMatch(.*)*",
-    name: "user",
-    meta: {
-      title: "用户中心",
-      // federation: {
-      //   basePath: '/'
-      // }
-    },
-    component: remoteUser,
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login.vue')
+  },
+  {
+    path: '/user',
+    component: () => import('@/components/layout/userContainer.vue'),
+    children: [
+      {
+        path: ':pathMatch(.*)*',
+        component: () => import('@user/UserApp')
+      }
+    ]
   }
 ];
 

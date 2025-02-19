@@ -15,7 +15,6 @@ export default {
 </script>
 <template>
   <div class="">
-    in user app
     <router-view></router-view>
   </div>
 </template>

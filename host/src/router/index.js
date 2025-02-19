@@ -7,4 +7,13 @@ const router = createRouter({
   routes,
 });
 
+router.beforeResolve(async (to) => {
+  if (to.path.startsWith('/user') && !window.USER_REMOTE) {
+    await loadRemoteEntry(
+      'USER_REMOTE',
+      `${process.env.VUE_APP_REMOTEECHARTS_USER}/remoteEntry.js`
+    )
+  }
+})
+
 export default router;
