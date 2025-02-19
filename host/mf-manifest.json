@@ -80,6 +80,12 @@
       "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
     {
+      "federationContainerName": "USER_REMOTE",
+      "moduleName": "user",
+      "alias": "@user",
+      "entry": "undefined/remoteEntry.js"
+    },
+    {
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "AppIndex",
       "alias": "@remote",
