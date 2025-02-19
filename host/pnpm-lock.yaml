@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@module-federation/runtime':
+        specifier: ^0.8.11
+        version: 0.8.11
       '@rsbuild/plugin-eslint':
         specifier: ^1.1.0
         version: 1.1.0(@rsbuild/core@1.1.2)(eslint@9.20.0(jiti@1.21.7))
@@ -210,6 +213,9 @@ packages:
   '@module-federation/error-codes@0.7.3':
     resolution: {integrity: sha512-5jYNheYQZFek776t9h2I6qYEh6EdE2xsOJRBCicOC/DoBIcwztqbkPyu2ZYdO1c02qia2BTsLi6wOZ5TV9id7g==}
 
+  '@module-federation/error-codes@0.8.11':
+    resolution: {integrity: sha512-mqt8/BQq11Cc/zbuHtojTwbZ78LJiy4f/cm9UsQPWf65Pqxi4Ticn40wccVFq8O9gee/QEi2Mf3XiwSf2SHl0A==}
+
   '@module-federation/managers@0.7.3':
     resolution: {integrity: sha512-fuODMXAC3WEc9rk+Zxfe8/gQkFU1wvz2L3mwc5RwssN13d+yIeE+SD/C3ePc7VY9+9GtLcfEPgKgX/oMUL2SUw==}
 
@@ -227,6 +233,9 @@ packages:
       vue-tsc:
         optional: true
 
+  '@module-federation/runtime-core@0.6.19':
+    resolution: {integrity: sha512-PDMQIkxEWlF9c1ezDl1f+DwzoNoWan/jfhtBoOjp0JiMtPNPe3ZUH0v2++Cbaxc/BRtHT+ILCSDEezC4zF98uw==}
+
   '@module-federation/runtime-tools@0.5.1':
     resolution: {integrity: sha512-nfBedkoZ3/SWyO0hnmaxuz0R0iGPSikHZOAZ0N/dVSQaIzlffUo35B5nlC2wgWIc0JdMZfkwkjZRrnuuDIJbzg==}
 
@@ -239,11 +248,17 @@ packages:
   '@module-federation/runtime@0.7.3':
     resolution: {integrity: sha512-jjBwtT8iIRo70mfBK2Z0jGxjfM9zjYjVOh9qhTbbtlGTopkU/DQrHBGuxeyLXBGQXqjd6MYzXNVeRL0mif2Z0g==}
 
+  '@module-federation/runtime@0.8.11':
+    resolution: {integrity: sha512-07aBwU5AJltbspOot0gVYDA0PAMNkjBBaIRIUMsLNj9MGx01/YKl13z239UdC0Fk4hFlexpkef8ZvnMPgp4YFA==}
+
   '@module-federation/sdk@0.5.1':
     resolution: {integrity: sha512-exvchtjNURJJkpqjQ3/opdbfeT2wPKvrbnGnyRkrwW5o3FH1LaST1tkiNviT6OXTexGaVc2DahbdniQHVtQ7pA==}
 
   '@module-federation/sdk@0.7.3':
     resolution: {integrity: sha512-DeU2pvEqiTWcfuZuWeV1/XSRU6zC4u7v2uLg44F6uRt5+F0W/eVwb0Wme9CmEmL/oit0dZ7qe09bf/IRrEJylw==}
+
+  '@module-federation/sdk@0.8.11':
+    resolution: {integrity: sha512-h9oXuOABJ5O77TeWZoLO3KNq7HywdZkX2c2rmYEQRRrkuXHgHAQu0nEs7ZuL5YDWNQLUMxoOyTH+sK+JWgvnKQ==}
 
   '@module-federation/third-party-dts-extractor@0.7.3':
     resolution: {integrity: sha512-SptghP6wlcG6GKFplRUnokldD7ebBSHrZpITFVYSXiddW7Hqk5JxNqpx3sm7R6xi1UV1eLPRsx23wzEsxLJAJw==}
@@ -312,25 +327,21 @@ packages:
     resolution: {integrity: sha512-lZlO/rAJSeozi+qtVLkGSXfe+riPawCwM4FsrflELfNlvvEXpANwtrdJ+LsaNVXcgvhh50ZX2KicTdmx9G2b6Q==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.1.8':
     resolution: {integrity: sha512-bX7exULSZwy8xtDh6Z65b6sRC4uSxGuyvSLCEKyhmG6AnJkg0gQMxk3hoO0hWnyGEZgdJEn+jEhk0fjl+6ZRAQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.1.8':
     resolution: {integrity: sha512-2Prw2USgTJ3aLdLExfik8pAwAHbX4MZrACBGEmR7Vbb56kLjC+++fXkciRc50pUDK4JFr1VQ7eNZrJuDR6GG6Q==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.1.8':
     resolution: {integrity: sha512-bnVGB/mQBKEdzOU/CPmcOE3qEXxGOGGW7/i6iLl2MamVOykJq8fYjL9j86yi6L0r009ja16OgWckykQGc4UqGw==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-win32-arm64-msvc@1.1.8':
     resolution: {integrity: sha512-u+na3gxhzeksm4xZyAzn1+XWo5a5j7hgWA/KcFPDQ8qQNkRknx4jnQMxVtcZ9pLskAYV4AcOV/AIximx7zvv8A==}
@@ -1193,6 +1204,10 @@ packages:
 
   isomorphic-rslog@0.0.6:
     resolution: {integrity: sha512-HM0q6XqQ93psDlqvuViNs/Ea3hAyGDkIdVAHlrEocjjAwGrs1fZ+EdQjS9eUPacnYB7Y8SoDdSY3H8p3ce205A==}
+    engines: {node: '>=14.17.6'}
+
+  isomorphic-rslog@0.0.7:
+    resolution: {integrity: sha512-n6/XnKnZ5eLEj6VllG4XmamXG7/F69nls8dcynHyhcTpsPUYgcgx4ifEaCo4lQJ2uzwfmIT+F0KBGwBcMKmt5g==}
     engines: {node: '>=14.17.6'}
 
   isomorphic-ws@5.0.0:
@@ -2227,6 +2242,8 @@ snapshots:
 
   '@module-federation/error-codes@0.7.3': {}
 
+  '@module-federation/error-codes@0.8.11': {}
+
   '@module-federation/managers@0.7.3':
     dependencies:
       '@module-federation/sdk': 0.7.3
@@ -2264,6 +2281,11 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@module-federation/runtime-core@0.6.19':
+    dependencies:
+      '@module-federation/error-codes': 0.8.11
+      '@module-federation/sdk': 0.8.11
+
   '@module-federation/runtime-tools@0.5.1':
     dependencies:
       '@module-federation/runtime': 0.5.1
@@ -2283,11 +2305,21 @@ snapshots:
       '@module-federation/error-codes': 0.7.3
       '@module-federation/sdk': 0.7.3
 
+  '@module-federation/runtime@0.8.11':
+    dependencies:
+      '@module-federation/error-codes': 0.8.11
+      '@module-federation/runtime-core': 0.6.19
+      '@module-federation/sdk': 0.8.11
+
   '@module-federation/sdk@0.5.1': {}
 
   '@module-federation/sdk@0.7.3':
     dependencies:
       isomorphic-rslog: 0.0.6
+
+  '@module-federation/sdk@0.8.11':
+    dependencies:
+      isomorphic-rslog: 0.0.7
 
   '@module-federation/third-party-dts-extractor@0.7.3':
     dependencies:
@@ -3295,6 +3327,8 @@ snapshots:
   isexe@2.0.0: {}
 
   isomorphic-rslog@0.0.6: {}
+
+  isomorphic-rslog@0.0.7: {}
 
   isomorphic-ws@5.0.0(ws@8.18.0):
     dependencies:

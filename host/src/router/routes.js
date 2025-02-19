@@ -1,5 +1,6 @@
 import {remoteViews} from "@remote/views"
 import remoteBigData from "@remote/bigData"
+import remoteUser from "@user/user"
 
 const routes = [
   {
@@ -15,6 +16,17 @@ const routes = [
     },
     component: remoteBigData,
   },
+  {
+    path: "/user/:pathMatch(.*)*",
+    name: "user",
+    meta: {
+      title: "用户中心",
+      // federation: {
+      //   basePath: '/'
+      // }
+    },
+    component: remoteUser,
+  }
 ];
 
 export default routes;

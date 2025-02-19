@@ -4,7 +4,7 @@ import routes from "./routes";
 const router = createRouter({
   hashbang: false,
   mode: "hash",
-  history: createWebHashHistory("/"),
+  history: createWebHashHistory("/user/"),
   routes,
 });
 

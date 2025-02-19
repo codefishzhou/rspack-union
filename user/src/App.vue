@@ -15,7 +15,7 @@ export default {
 </script>
 <template>
   <div class="">
-    Hi from landing page provider {{ year }}
+    in user app
     <router-view></router-view>
   </div>
 </template>

@@ -3,14 +3,14 @@
 
 const routes = [
   {
-    path: "/",
-    name: "index",
-    component: () => import("@/views/Index.vue"),
+    path: '/user',
+    name: 'userHome',
+    component: () => import('@/views/user.vue')
   },
   {
-    path: "/home",
-    name: "home",
-    component: () => import("@/views/home.vue"),
+    path: '/home',
+    name: 'userHome',
+    component: () => import('@/views/home.vue')
   },
 ];
 

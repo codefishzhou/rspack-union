@@ -58,6 +58,7 @@ export default defineConfig({
           remotes: {
             // "@remote": "ASSET_REMOTE@http://localhost:6001/remoteEntry.js",
             "@remote": `ASSET_REMOTE@${process.env.VUE_APP_REMOTEECHARTS}/remoteEntry.js`,
+            "@user": `USER_REMOTE@${process.env.VUE_APP_REMOTEECHARTS_USER}/remoteEntry.js`,
           },
           shared: {
             vue: {

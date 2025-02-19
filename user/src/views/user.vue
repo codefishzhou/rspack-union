@@ -1,12 +1,8 @@
 <script>
 export default {
-  name: "LandingView",
-
+  name: "user",
 };
 </script>
-
 <template>
-  <div>
-   landing page dd
-  </div>
+  <div>Hello from user</div>
 </template>

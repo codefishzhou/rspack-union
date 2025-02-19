@@ -13,12 +13,12 @@ export default defineConfig({
     },
   },
   server: {
-    port: 5051,
+    port: 5052,
     open: false,
   },
   dev: {
     // It is necessary to configure assetPrefix, and in the production build, you need to configure output.assetPrefix
-    assetPrefix: `http://localhost:5051`,
+    assetPrefix: `http://localhost:5052`,
   },
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
@@ -27,7 +27,7 @@ export default defineConfig({
     polyfill: "usage",
   },
   html: {
-    title: "可视化",
+    title: "用户中心",
     crossorigin: "anonymous",
     favicon: "./public/favicon.svg",
     meta: {
@@ -72,13 +72,11 @@ export default defineConfig({
       config.resolve.alias["@"] = path.resolve(__dirname, "src");
       appendPlugins([
         new ModuleFederationPlugin({
-          name: `ASSET_REMOTE`,
+          name: `USER_REMOTE`,
           filename: `remoteEntry.js`,
           exposes: {
-            "./AppIndex": "./src/views/AppIndex",
-            "./bigData": "./src/views/dashed/bigData.vue",
-            // "./views": "./src/views",
-            "./store": "./src/store/index",
+            "./user": "./src/App.vue",
+            "./routes": "./src/router/"
           },
           shared: {
             vue: {

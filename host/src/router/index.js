@@ -4,7 +4,6 @@ import routes from "./routes";
 const router = createRouter({
   hashbang: false,
   history: createWebHashHistory("/"),
-  base: "/dashboard/",
   routes,
 });
 
