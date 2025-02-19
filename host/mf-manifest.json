@@ -81,7 +81,7 @@
     },
     {
       "federationContainerName": "USER_REMOTE",
-      "moduleName": "user",
+      "moduleName": "UserApp",
       "alias": "@user",
       "entry": "undefined/remoteEntry.js"
     },

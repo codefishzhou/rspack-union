@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrsbuild_vue_consumer=self.webpackChunkrsbuild_vue_consumer||[]).push([["360"],{8344:function(e,u,n){n.r(u),n.d(u,{default:function(){return c}});var r=n("5962"),l=n("3744"),c=(0,l.default)({},[["render",function(e,u){return(0,r.openBlock)(),(0,r.createElementBlock)("div",null," login ")}]])}}]);

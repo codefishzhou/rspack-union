@@ -96,7 +96,7 @@
       "alias": "@user",
       "consumingFederationContainerName": "ASSET_HOST",
       "federationContainerName": "USER_REMOTE",
-      "moduleName": "user",
+      "moduleName": "UserApp",
       "usedIn": [
         "src/bootstrap.js + 9 modules"
       ],
