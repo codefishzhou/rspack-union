@@ -4,7 +4,7 @@
 const routes = [
   {
     path: '/user',
-    component: () => import('@/views/index.vue'),
+    component: () => import('@/views/Index.vue'),
     children: [
       {
         path: 'a',
