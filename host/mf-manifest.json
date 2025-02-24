@@ -16,8 +16,8 @@
     "types": {
       "path": "",
       "name": "",
-      "zip": "",
-      "api": ""
+      "zip": ".",
+      "api": "."
     },
     "globalName": "ASSET_HOST",
     "pluginVersion": "0.7.3",
@@ -84,12 +84,6 @@
       "moduleName": "UserApp",
       "alias": "@user",
       "entry": "undefined/remoteEntry.js"
-    },
-    {
-      "federationContainerName": "ASSET_REMOTE",
-      "moduleName": "AppIndex",
-      "alias": "@remote",
-      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     }
   ],
   "exposes": []

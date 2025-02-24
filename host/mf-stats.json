@@ -16,8 +16,8 @@
     "types": {
       "path": "",
       "name": "",
-      "zip": "",
-      "api": ""
+      "zip": ".",
+      "api": "."
     },
     "globalName": "ASSET_HOST",
     "pluginVersion": "0.7.3",
@@ -78,7 +78,7 @@
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "store",
       "usedIn": [
-        "src/bootstrap.js + 9 modules"
+        "src/bootstrap.js + 8 modules"
       ],
       "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
@@ -88,7 +88,7 @@
       "federationContainerName": "ASSET_REMOTE",
       "moduleName": "bigData",
       "usedIn": [
-        "src/bootstrap.js + 9 modules"
+        "src/router/modules/echarts/bigData.js"
       ],
       "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     },
@@ -98,19 +98,9 @@
       "federationContainerName": "USER_REMOTE",
       "moduleName": "UserApp",
       "usedIn": [
-        "src/bootstrap.js + 9 modules"
+        "src/router/modules/user/index.js"
       ],
       "version": "undefined/remoteEntry.js"
-    },
-    {
-      "alias": "@remote",
-      "consumingFederationContainerName": "ASSET_HOST",
-      "federationContainerName": "ASSET_REMOTE",
-      "moduleName": "AppIndex",
-      "usedIn": [
-        "src/views/Index.vue + 4 modules"
-      ],
-      "entry": "https://codefishzhou.github.io/rspack-union/echarts/remoteEntry.js"
     }
   ],
   "exposes": []
