@@ -10,7 +10,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "@/assets/styles/normal.css";
   @tailwind base;
   @tailwind components;
   @tailwind utilities;

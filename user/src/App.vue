@@ -20,7 +20,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/normal.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

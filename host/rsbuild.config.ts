@@ -1,10 +1,11 @@
-import { defineConfig } from "@rsbuild/core";
-import { pluginVue } from "@rsbuild/plugin-vue";
+import { defineConfig, rspack  } from "@rsbuild/core";
+import { pluginVue,  } from "@rsbuild/plugin-vue";
 // import { pluginEslint } from '@rsbuild/plugin-eslint';
 import path from "node:path";
 import { dependencies } from "./package.json";
 import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { pluginSass } from "@rsbuild/plugin-sass";
+import Dotenv from 'dotenv-webpack';
 
 export default defineConfig({
   source: {
@@ -24,6 +25,15 @@ export default defineConfig({
   server: {
     port: 5050,
     open: false,
+    proxy: [
+      {
+        context: ['/worknotes'],
+        target: process.env.API_APP_BASE_URL,
+        changeOrigin: true,
+        secure: false,
+      },
+    ],
+
   },
   output: {
     assetPrefix: process.env.VUE_APP_ASSETSPREFIX,
@@ -52,6 +62,9 @@ export default defineConfig({
       // public
       config.resolve.alias["@"] = path.resolve(__dirname, "src");
       appendPlugins([
+        new Dotenv({
+          path: path.resolve(__dirname, `.env.${process.env.MODE}`),
+        }),
         new ModuleFederationPlugin({
           name: `ASSET_HOST`,
           filename: `ASSET_HOST__remoteEntry.js`,
