@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrsbuild_vue_provider=self.webpackChunkrsbuild_vue_provider||[]).push([["34"],{2135:function(e,r,u){u.r(r),u.d(r,{default:function(){return t}});var n=u("2077"),l=u("3744"),t=(0,l.default)({},[["render",function(e,r){return(0,n.openBlock)(),(0,n.createElementBlock)("div",null,"home")}]])}}]);

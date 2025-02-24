@@ -1,0 +1,103 @@
+{
+  "id": "USER_REMOTE",
+  "name": "USER_REMOTE",
+  "metaData": {
+    "name": "USER_REMOTE",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "rsbuild-vue_provider"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "USER_REMOTE",
+    "pluginVersion": "0.7.3",
+    "publicPath": "/rspack-union/echarts/",
+    "prefetchInterface": false
+  },
+  "shared": [
+    {
+      "id": "USER_REMOTE:vue",
+      "name": "vue",
+      "version": "3.4.31",
+      "singleton": true,
+      "requiredVersion": "3.4.31",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/929.fecbe649.js",
+            "static/js/async/34.fdefa97f.js",
+            "static/js/async/46.2b2b918f.js"
+          ],
+          "sync": [
+            "static/js/async/lib-vue.3b993094.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "USER_REMOTE:vuex",
+      "name": "vuex",
+      "version": "4.1.0",
+      "singleton": true,
+      "requiredVersion": "^4.1.0",
+      "assets": {
+        "js": {
+          "async": [
+            "static/js/async/lib-vue.3b993094.js"
+          ],
+          "sync": [
+            "static/js/async/46.2b2b918f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "USER_REMOTE:UserApp",
+      "name": "UserApp",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/lib-polyfill.4f20e7cd.js",
+            "static/js/async/__federation_expose_UserApp.e3530d20.js"
+          ],
+          "async": [
+            "static/js/async/lib-vue.3b993094.js",
+            "static/js/async/lib-router.090e68ca.js",
+            "static/js/async/714.a96867ae.js",
+            "static/js/async/929.fecbe649.js",
+            "static/js/async/34.fdefa97f.js",
+            "static/js/async/46.2b2b918f.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "static/css/async/714.ea7dfe14.css"
+          ]
+        }
+      },
+      "path": "./UserApp"
+    }
+  ]
+}
